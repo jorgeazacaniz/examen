@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { CLIENTES } from './clientes.jason';
 import { Cliente } from './clientes';
 import { Observable } from 'rxjs';
 import { of } from 'rxjs';

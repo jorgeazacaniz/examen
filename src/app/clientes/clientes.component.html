@@ -1,7 +1,7 @@
 <div class="card border-primary mb-3" >
   <div class="card-header">Clientes</div>
   <div class="card-body text-primary">
-  <div class="my-2 text-left">
+  <div class="my-2 text-left" >
     <button class="btn btn-rounded btn-primary" type="button" [routerLink] = "['/clientes/form']">Crear Cliente</button>
   </div>
   <table class="table table-border table-table-striped">
@@ -12,11 +12,14 @@
             <th>apellido</th>
               <th>email</th>
                 <th>Fecha</th>
-                <th>
+                <th >
                   Editar
                 </th>
-                <th>
+                <th >
                   Eliminar
+                </th>
+                <th >
+                  Crear Factura
                 </th>
       </tr>
     </thead>
@@ -27,12 +30,14 @@
       <td>{{cliente.apellido}}</td>
       <td>{{cliente.email}}</td>
       <td>{{cliente.createAt}}</td>
-      <td>
+      <td >
         <button type="button" name="editar" [routerLink]="['/clientes/form', cliente.id]" class="btn btn-primary btn-sm">editar</button>
       </td>
-      <td>
+      <td >
         <button type="button" name="eliminar" (click)= 'delete(cliente)' class="btn btn-danger btn-sm">eliminar</button>
       </td>
+      <td >
+        <button type="button" name="editar" [routerLink]="['/facturas/form', cliente.id]" class="btn btn-success btn-sm">Crear</button></td>
     </tr>
   </tbody>
   </table>
